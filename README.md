@@ -1,3 +1,25 @@
+# Protein Stall 🥯💪
+
+A high-protein baked goods brand built for local farmers markets
+in Ocean Beach and Little Italy, San Diego.
+
+## Tech Stack
+- Next.js
+- React
+- Tailwind CSS
+- Vercel
+
+## Features
+- Product menu with macros
+- Market location info
+- Mobile-first design
+- SEO-friendly pages
+
+## Purpose
+Built as both a real small business website and a demonstration
+of full-stack web development and entrepreneurship.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
