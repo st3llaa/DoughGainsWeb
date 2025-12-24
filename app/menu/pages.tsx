@@ -1,40 +1,57 @@
-const products = [
+const menuItems = [
   {
     name: "Protein Bagel",
-    protein: "18g",
-    calories: "210",
-    description: "Greek yogurt based, soft and chewy"
+    description: "Greek yogurt based, soft and chewy",
+    protein: 18,
+    calories: 210,
   },
   {
     name: "Protein Pancakes",
-    protein: "22g",
-    calories: "240",
-    description: "Made fresh with topping station"
+    description: "Fluffy pancakes with optional toppings",
+    protein: 22,
+    calories: 240,
   },
   {
-    name: "Protein Brownies",
-    protein: "16g",
-    calories: "190",
-    description: "Rich chocolate, no refined sugar"
-  }
+    name: "Protein Brownie",
+    description: "Rich chocolate, no refined sugar",
+    protein: 16,
+    calories: 190,
+  },
 ];
 
-export default function Menu() {
+export default function MenuPage() {
   return (
-    <main className="px-6 py-16 max-w-5xl mx-auto">
-      <h1 className="text-4xl font-bold mb-10">Menu & Macros</h1>
+    <main className="min-h-screen bg-stone-50 px-6 py-16">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-4xl font-bold mb-4">Menu & Macros</h1>
+        <p className="text-gray-600 mb-12">
+          High-protein baked goods made fresh for training, recovery, and real life.
+        </p>
 
-      <div className="grid md:grid-cols-3 gap-8">
-        {products.map((item) => (
-          <div key={item.name} className="bg-white p-6 rounded-xl shadow">
-            <h2 className="text-xl font-semibold">{item.name}</h2>
-            <p className="text-sm text-gray-600 mb-4">
-              {item.description}
-            </p>
-            <p>Protein: <strong>{item.protein}</strong></p>
-            <p>Calories: <strong>{item.calories}</strong></p>
-          </div>
-        ))}
+        <div className="grid gap-8 md:grid-cols-3">
+          {menuItems.map((item) => (
+            <div
+              key={item.name}
+              className="bg-white rounded-xl shadow p-6"
+            >
+              <h2 className="text-xl font-semibold mb-2">
+                {item.name}
+              </h2>
+              <p className="text-sm text-gray-600 mb-4">
+                {item.description}
+              </p>
+
+              <div className="text-sm">
+                <p>
+                  <strong>{item.protein}g</strong> protein
+                </p>
+                <p>
+                  <strong>{item.calories}</strong> calories
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );
