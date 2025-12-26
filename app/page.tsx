@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "./components/NavBar";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-stone-50 text-stone-900">
-
+      <Navbar />
       {/* ================= HERO BANNER ================= */}
       <section className="relative min-h-[80vh] flex items-center justify-center px-6 text-center">
         {/* Hero image */}
